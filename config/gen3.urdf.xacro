@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="gen3">
+    <xacro:arg name="initial_positions_file" default="$(find kortex_description)/config/initial_positions.yaml" />
+
+    <!-- Import gen3 urdf file -->
+    <xacro:include filename="$(find kortex_description)/robots/gen3.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="gen3.ros2_control.xacro" />
+
+
+    <xacro:gen3_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

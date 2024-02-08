@@ -1,0 +1,26 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: kortex_description
+    relative_path: robots/gen3.xacro
+    xacro_args: dof:=6 vision:=true gripper:=false
+  srdf:
+    relative_path: config/gen3.srdf
+  package_settings:
+    author_name: Karoline Heiwolt
+    author_email: contact@karoline.heiwolt.de
+    generated_timestamp: 1707389802
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
