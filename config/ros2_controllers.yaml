@@ -6,7 +6,7 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-    manipulator_controller:
+    joint_trajectory_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
     twist_controller:
@@ -15,7 +15,7 @@ controller_manager:
     fault_controller:
       type: picknik_reset_fault_controller/PicknikResetFaultController
 
-manipulator_controller:
+joint_trajectory_controller:
   ros__parameters:
     joints:
       - joint_1

@@ -40,6 +40,7 @@ def launch_setup(context, *args, **kwargs):
         "use_fake_hardware": use_fake_hardware,
         "gripper": "false",
         "dof": "6",
+        "vision": "true",
     }
 
     moveit_config = (
