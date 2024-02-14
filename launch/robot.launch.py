@@ -106,11 +106,11 @@ def launch_setup(context, *args, **kwargs):
         arguments=["twist_controller", "--inactive", "-c", "/controller_manager"],
     )
 
-    fault_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["fault_controller", "-c", "/controller_manager"],
-    )
+    # fault_controller_spawner = Node(
+    #     package="controller_manager",
+    #     executable="spawner",
+    #     arguments=["fault_controller", "-c", "/controller_manager"],
+    # )
 
     # rviz with moveit configuration
     rviz_config_file = (
@@ -157,7 +157,7 @@ def launch_setup(context, *args, **kwargs):
         delay_rviz_after_joint_state_broadcaster_spawner,
         robot_traj_controller_spawner,
         robot_pos_controller_spawner,
-        fault_controller_spawner,
+       # fault_controller_spawner,
         move_group_node,
         static_tf,
     ]
